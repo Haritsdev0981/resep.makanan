@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:submission_dicoding/Screen/notificationpage.dart';
@@ -25,6 +23,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: setAppBar(),
       body: pages[pageIndex],
       bottomNavigationBar: Container(
         height: 80,
@@ -103,33 +102,22 @@ class Page1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: setAppBar(),
-      body: Column(
+    return Container(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Center(
-            child: Container(
-              width: 370,
-              height: 50,
-              // decoration: BoxDecoration(
-              //     border: Border.all(color: Colors.black26),
-              //     borderRadius: BorderRadius.all(Radius.circular(15))),
-              child: TextField(
-                textInputAction: TextInputAction.send,
-                style: TextStyle(color: Colors.black54, fontSize: 20),
-                decoration: InputDecoration(
-                    border: InputBorder.none,
-                    enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.black54),
-                        borderRadius: BorderRadius.all(Radius.circular(15))),
-                    focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xffF54749)),
-                        borderRadius: BorderRadius.all(Radius.circular(15))),
-                    hintText: 'Cari Makanan',
-                    hintStyle: TextStyle(color: Colors.black26, fontSize: 18),
-                    prefixIcon: Icon(Icons.search)),
-              ),
+          Container(
+            width: 335,
+            height: 50,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black26),
+                borderRadius: BorderRadius.all(Radius.circular(15))),
+            child: TextField(
+              style: TextStyle(color: Colors.white, fontSize: 25),
+              decoration: InputDecoration(
+                  hintText: 'Cari Makanan',
+                  hintStyle: TextStyle(color: Colors.black26, fontSize: 18),
+                  prefixIcon: Icon(Icons.search)),
             ),
           ),
         ],
