@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:submission_dicoding/page/bookmarkscreen.dart';
 import 'package:submission_dicoding/page/homescreen.dart';
+import 'package:submission_dicoding/page/notificationscreen.dart';
+
 //menghapus import dari file ini ke notification.dart
 import 'package:submission_dicoding/widget/appBar.dart';
-
-import 'notificationpage.dart';
 
 //Menambahkan Const pada setiap widget yang tetap
 

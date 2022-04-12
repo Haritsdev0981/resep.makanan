@@ -1,19 +1,30 @@
 import 'package:flutter/material.dart';
 
 class NotificationScreen extends StatelessWidget {
-  const NotificationScreen({ Key? key }) : super(key: key);
+  const NotificationScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffC4DFCB),
-      child: Center(
-        child: Text(
-          "Page Number 2",
-          style: TextStyle(
-            color: Colors.green[900],
-            fontSize: 45,
-            fontWeight: FontWeight.w500,
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(100.0),
+        child: Container(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 50, left: 20, right: 20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    "Selamat Pagi 👋",
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 20),
+                  )
+                ],
+              ),
+            ),
           ),
         ),
       ),
