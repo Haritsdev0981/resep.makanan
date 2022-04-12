@@ -18,9 +18,9 @@ class NotificationScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
                   Text(
-                    "Selamat Pagi 👋",
+                    "Notifikasi  📮📮",
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 20),
+                        fontWeight: FontWeight.w600, fontSize: 20),
                   )
                 ],
               ),

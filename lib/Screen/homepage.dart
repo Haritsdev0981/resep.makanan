@@ -1,12 +1,14 @@
+
 import 'package:flutter/material.dart';
+
 import 'package:submission_dicoding/page/bookmarkscreen.dart';
 import 'package:submission_dicoding/page/homescreen.dart';
 import 'package:submission_dicoding/page/notificationscreen.dart';
 
 //menghapus import dari file ini ke notification.dart
-import 'package:submission_dicoding/widget/appBar.dart';
 
 //Menambahkan Const pada setiap widget yang tetap
+
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -19,7 +21,6 @@ class _HomePageState extends State<HomePage> {
   @override
   int pageIndex = 0;
 
-  //membuat file terpisah untuk masing masing screen
   final pages = [
     const HomeScreen(),
     const NotificationScreen(),
@@ -29,11 +30,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: setAppBar(),
       body: pages[pageIndex],
       bottomNavigationBar: Container(
-        //mengubah dari 80 mennjadi 70
-        height: 70,
+        height: 80,
         decoration: const BoxDecoration(
           color: Colors.white,
         ),
