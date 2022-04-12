@@ -1,7 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:submission_dicoding/Screen/notificationpage.dart';
+//menghapus import dari file ini ke notification.dart
 import 'package:submission_dicoding/widget/appBar.dart';
+
+//Menambahkan Const pada setiap widget yang tetap
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -111,8 +112,8 @@ class Page1 extends StatelessWidget {
             height: 50,
             decoration: BoxDecoration(
               border: Border.all(color: Colors.black26),
-                borderRadius: BorderRadius.all(Radius.circular(15))),
-            child: TextField(
+                borderRadius:const BorderRadius.all(Radius.circular(15))),
+            child:const TextField(
               style: TextStyle(color: Colors.white, fontSize: 25),
               decoration: InputDecoration(
                   hintText: 'Cari Makanan',

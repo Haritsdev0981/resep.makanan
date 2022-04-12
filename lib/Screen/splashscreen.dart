@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+//menghapus import cupertino di sini
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -9,8 +9,8 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          children: [
-            Image(
+          children: const [
+             Image(
               image: AssetImage('assets/IMG/bg_splash.png'),
               fit: BoxFit.cover,
             )
