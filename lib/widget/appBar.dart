@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-//Menambahkan Const pada setiap widget yang tetap
+
 
 PreferredSize setAppBar() {
   return PreferredSize(

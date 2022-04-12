@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:submission_dicoding/page/bookmarkscreen.dart';
+import 'package:submission_dicoding/page/homescreen.dart';
 //menghapus import dari file ini ke notification.dart
 import 'package:submission_dicoding/widget/appBar.dart';
+
+import 'notificationpage.dart';
 
 //Menambahkan Const pada setiap widget yang tetap
 
@@ -15,10 +19,11 @@ class _HomePageState extends State<HomePage> {
   @override
   int pageIndex = 0;
 
+  //membuat file terpisah untuk masing masing screen
   final pages = [
-    const Page1(),
-    const Page2(),
-    const Page3(),
+    const HomeScreen(),
+    const NotificationScreen(),
+    const BookmarkScreen(),
   ];
 
   @override
@@ -27,7 +32,8 @@ class _HomePageState extends State<HomePage> {
       appBar: setAppBar(),
       body: pages[pageIndex],
       bottomNavigationBar: Container(
-        height: 80,
+        //mengubah dari 80 mennjadi 70
+        height: 70,
         decoration: const BoxDecoration(
           color: Colors.white,
         ),
@@ -92,77 +98,6 @@ class _HomePageState extends State<HomePage> {
                     ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class Page1 extends StatelessWidget {
-  const Page1({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            width: 335,
-            height: 50,
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black26),
-                borderRadius:const BorderRadius.all(Radius.circular(15))),
-            child:const TextField(
-              style: TextStyle(color: Colors.white, fontSize: 25),
-              decoration: InputDecoration(
-                  hintText: 'Cari Makanan',
-                  hintStyle: TextStyle(color: Colors.black26, fontSize: 18),
-                  prefixIcon: Icon(Icons.search)),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Page2 extends StatelessWidget {
-  const Page2({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffC4DFCB),
-      child: Center(
-        child: Text(
-          "Page Number 2",
-          style: TextStyle(
-            color: Colors.green[900],
-            fontSize: 45,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class Page3 extends StatelessWidget {
-  const Page3({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: const Color(0xffC4DFCB),
-      child: Center(
-        child: Text(
-          "Page Number 3",
-          style: TextStyle(
-            color: Colors.green[900],
-            fontSize: 45,
-            fontWeight: FontWeight.w500,
-          ),
         ),
       ),
     );
