@@ -103,6 +103,7 @@ class ListNotif extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             child: Container(
               child: Card(
+                color: Color(0xffFEEBC9),
                 child: ListTile(
                     title: Text(namaUser[index],
                         style: const TextStyle(

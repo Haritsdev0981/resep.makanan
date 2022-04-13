@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:submission_dicoding/data/data_menu.dart';
+import 'package:submission_dicoding/model/makanan.dart';
 
 import 'package:submission_dicoding/page/bookmarkscreen.dart';
 import 'package:submission_dicoding/page/homescreen.dart';
@@ -88,13 +90,13 @@ class _HomePageState extends State<HomePage> {
                   ? const Icon(
                       Icons.book_rounded,
                       color: Color(0xffF54749),
-                      size: 35,
-                    )
+                size: 35,
+              )
                   : const Icon(
-                      Icons.book_outlined,
-                      color: Colors.black12,
-                      size: 35,
-                    ),
+                Icons.book_outlined,
+                color: Colors.black12,
+                size: 35,
+              ),
             ),
           ],
         ),
