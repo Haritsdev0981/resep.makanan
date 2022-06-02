@@ -1,16 +1,14 @@
-
 import 'package:flutter/material.dart';
 import 'package:submission_dicoding/data/data_menu.dart';
 import 'package:submission_dicoding/model/makanan.dart';
 
-import 'package:submission_dicoding/page/bookmarkscreen.dart';
+import 'package:submission_dicoding/page/wallpaperscreen.dart';
 import 'package:submission_dicoding/page/homescreen.dart';
 import 'package:submission_dicoding/page/notificationscreen.dart';
 
 //menghapus import dari file ini ke notification.dart
 
 //Menambahkan Const pada setiap widget yang tetap
-
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -35,8 +33,18 @@ class _HomePageState extends State<HomePage> {
       body: pages[pageIndex],
       bottomNavigationBar: Container(
         height: 80,
-        decoration: const BoxDecoration(
+        margin: EdgeInsets.only(bottom: 20, left: 10, right: 10),
+        decoration: BoxDecoration(
           color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(20)),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 0,
+              blurRadius: 3,
+              offset: Offset(0, 1), // changes position of shadow
+            ),
+          ],
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -88,15 +96,15 @@ class _HomePageState extends State<HomePage> {
               },
               icon: pageIndex == 2
                   ? const Icon(
-                      Icons.book_rounded,
+                      Icons.picture_in_picture_alt_rounded,
                       color: Color(0xffF54749),
-                size: 35,
-              )
+                      size: 35,
+                    )
                   : const Icon(
-                Icons.book_outlined,
-                color: Colors.black12,
-                size: 35,
-              ),
+                      Icons.picture_in_picture_alt_outlined,
+                      color: Colors.black12,
+                      size: 35,
+                    ),
             ),
           ],
         ),

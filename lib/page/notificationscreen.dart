@@ -91,7 +91,7 @@ class ListNotif extends StatelessWidget {
     const Icon(Icons.send_sharp, color: Color(0xff3F3D56), size: 30),
     const Icon(Icons.send_sharp, color: Color(0xff3F3D56), size: 30),
     const Icon(Icons.send_sharp, color: Color(0xff3F3D56), size: 30),
-    const Icon(Icons.send_sharp, color: Color(0xff3F3D56), size: 30),
+    const Icon(Icons.send_sharp, color: Color(0xff3F3D56), size: 30)
   ];
 
   @override
@@ -113,7 +113,8 @@ class ListNotif extends StatelessWidget {
                     leading: CircleAvatar(
                       backgroundImage: NetworkImage(imgUser[index]),
                     ),
-                    trailing: iconNotif[index]),
+                    trailing: iconNotif[index]
+              ),
               ),
             ),
           );

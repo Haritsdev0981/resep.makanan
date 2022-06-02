@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:submission_dicoding/Screen/detail/detailpageBar.dart';
 import 'package:submission_dicoding/widget/appBar.dart';
 import 'package:submission_dicoding/widget/tab_menu.dart';
 
@@ -11,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context)  {
+  Widget build(BuildContext context) {
     // TabController _tabController =
     // TabController(length: 4, vsync: this, initialIndex: 0);
 
@@ -26,7 +27,10 @@ class HomeScreen extends StatelessWidget {
               //search box
               Container(
                 //membuat Widht menjadi responsive pada device
-                width: MediaQuery.of(context).size.height,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .height,
                 height: 50,
 
                 child: const TextField(
@@ -48,8 +52,12 @@ class HomeScreen extends StatelessWidget {
 
               //event
               Container(
-                margin: EdgeInsets.only(top: 20, bottom: 20, left: 10, right: 10),
-                width: MediaQuery.of(context).size.height,
+                margin: EdgeInsets.only(
+                    top: 20, bottom: 20, left: 10, right: 10),
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .height,
                 height: 160,
                 decoration: BoxDecoration(
                     color: Color(0xffFEEBC9),
@@ -72,7 +80,8 @@ class HomeScreen extends StatelessWidget {
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                               color: Color(0xffF54749),
-                              borderRadius: BorderRadius.all(Radius.circular(14))),
+                              borderRadius: BorderRadius.all(
+                                  Radius.circular(14))),
                           child: Text(
                             "Lihat Lainnya",
                             style: TextStyle(color: Colors.white, fontSize: 12),
@@ -92,22 +101,6 @@ class HomeScreen extends StatelessWidget {
               // nav Menu food
 
               TabBarContent()
-
-              // Container(
-              //   child: TabBar(
-              //     tabs: [
-              //       Tab(text: "Tradisional",),
-              //       Tab(text: "Cepat Saji",),
-              //       Tab(text: "Seafood",),
-              //       Tab(text: "Minuman",)
-              //     ],
-              //   ),
-              // ),
-              // Container(
-              //   child: TabBarView(
-              //     children: [],
-              //   ),
-              // )
 
             ],
           ),
