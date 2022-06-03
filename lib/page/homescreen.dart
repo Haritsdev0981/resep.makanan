@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:submission_dicoding/Screen/detail/detailpageBar.dart';
+import 'package:submission_dicoding/data/data_menu.dart';
+import 'package:submission_dicoding/model/makanan.dart';
 import 'package:submission_dicoding/widget/appBar.dart';
 import 'package:submission_dicoding/widget/tab_menu.dart';
 
@@ -100,7 +102,7 @@ class HomeScreen extends StatelessWidget {
 
               // nav Menu food
 
-              TabBarContent()
+              TabBarContent(itemList: MenuMakanan(),)
 
             ],
           ),

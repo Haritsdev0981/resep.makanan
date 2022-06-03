@@ -8,10 +8,11 @@ import 'package:submission_dicoding/Screen/detail/detailpageBar.dart';
 import 'package:submission_dicoding/data/data_menu.dart';
 
 class TabBarContent extends StatefulWidget {
-  const TabBarContent({Key? key}) : super(key: key);
+  const TabBarContent({Key? key, required this.itemList}) : super(key: key);
 
   @override
   State<TabBarContent> createState() => _TabBarContentState();
+  final MenuMakanan itemList;
 }
 
 class _TabBarContentState extends State<TabBarContent>
