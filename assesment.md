@@ -1,9 +1,9 @@
 # Dokumen Assessment & Panduan Pembagian Tugas Tim
 **Proyek:** Aplikasi Resep Makanan (DPPB - Desain dan Pemrograman Perangkat Bergerak)  
 **Anggota Tim:**
-1. **Harits** (Team Lead & Core Architect) - `@harits`
-2. **Aurel** (Frontend & Navigation Specialist) - `@aurel`
-3. **Aress** (UI/UX & Adaptive Layout Specialist) - `@aress`
+1. **Harits** (Team Lead & Core Architect) - `@Haritsdev0981`
+2. **Aurel** (Frontend & Navigation Specialist) - `@aureelnp`
+3. **Aress** (UI/UX & Adaptive Layout Specialist) - `@alfarezi170107`
 
 ---
 
@@ -49,8 +49,8 @@ Format di bawah ini disusun sedemikian rupa agar dapat langsung disalin atau di-
 
 ---
 
-### [ISSUE-01] Setup Fondasi Proyek, Routing Named Routes, & Dokumentasi Tim
-- **Assignee:** `@harits`
+### [ISSUE-01] Setup Fondasi Proyek, Routing Named Routes, & Dokumentasi Tim ([#2](https://github.com/Haritsdev0981/resep.makanan/issues/2))
+- **Assignee:** `@Haritsdev0981`
 - **Milestone:** Sprint 1 - Project Setup & Architecture
 - **Labels:** `setup`, `documentation`, `core`
 - **Kriteria DPPB:** CLO A (Kelengkapan Identitas Tim & README), CLO C (Named Routes)
@@ -67,12 +67,12 @@ Mempersiapkan struktur arsitektur proyek yang modular, mendefinisikan konstanta 
 - [ ] Daftarkan named routes di `lib/main.dart` dengan rute awal `Rute.splash`.
 - [ ] Buat struktur folder modular: `models/`, `screens/`, `widgets/`, `data/`, `utils/`.
 - [ ] Perbarui `README.md` dengan tabel nama lengkap, NIM, dan peran masing-masing anggota (Harits, Aurel, Aress).
-- [ ] Lakukan commit dan push dengan format: `feat(core): setup project architecture and named routes (#1)`.
+- [ ] Lakukan commit dan push dengan format: `feat(core): setup project architecture and named routes (#2)`.
 
 ---
 
-### [ISSUE-02] Desain Model Data Resep, Linear List, & Non-Linear Map
-- **Assignee:** `@harits`
+### [ISSUE-02] Desain Model Data Resep, Linear List, & Non-Linear Map ([#3](https://github.com/Haritsdev0981/resep.makanan/issues/3))
+- **Assignee:** `@Haritsdev0981`
 - **Milestone:** Sprint 1 - Data Layer
 - **Labels:** `data`, `core`
 - **Kriteria DPPB:** CLO B & C (Struktur Data Linear `List<Model>`, Non-Linear `Map<String, List<Model>>`, Nested Structure)
@@ -89,12 +89,12 @@ Membuat model objek `Resep` lengkap dengan relasi data bersarang (*nested list* 
   - `List<Resep> daftar`: minimal 6 data resep nusantara yang menarik (misal: Rendang Daging, Soto Ayam, Nasi Goreng Spesial, Sate Ayam Madura, Sayur Asem, Gado-Gado).
   - Method `Map<String, List<Resep>> perKategori()` untuk mengelompokkan data berdasarkan kategori masakan (Makanan Utama, Berkuah, Olahan Daging, Makanan Sehat).
   - List konstanta `List<String> semuaKategori`.
-- [ ] Lakukan commit dan push dengan format: `feat(model): create Resep model and in-memory dummy dataset (#2)`.
+- [ ] Lakukan commit dan push dengan format: `feat(model): create Resep model and in-memory dummy dataset (#3)`.
 
 ---
 
-### [ISSUE-03] Implementasi Splash Screen & Login Screen Berbasis Validasi Form
-- **Assignee:** `@aurel`
+### [ISSUE-03] Implementasi Splash Screen & Login Screen Berbasis Validasi Form ([#4](https://github.com/Haritsdev0981/resep.makanan/issues/4))
+- **Assignee:** `@aureelnp`
 - **Milestone:** Sprint 1 - Auth & Entry Flow
 - **Labels:** `ui`, `auth`, `navigation`
 - **Kriteria DPPB:** CLO C (StatefulWidget, TextEditingController, pushReplacementNamed, SnackBar, Validasi Input)
@@ -115,12 +115,12 @@ Membuat layar pembuka (`SplashScreen`) dengan timer otomatis yang menuju layar m
   - SnackBar error jika akun tidak cocok dengan `AkunDemo`.
   - Berhasil login: pindah ke `HomeScreen` via `Navigator.pushReplacementNamed(context, Rute.home, arguments: username)`.
   - Tampilan adaptif: batasi lebar kartu login di layar lebar (maks 420px).
-- [ ] Lakukan commit dan push: `feat(auth): implement splash screen and login form with validation (#3)`.
+- [ ] Lakukan commit dan push: `feat(auth): implement splash screen and login form with validation (#4)`.
 
 ---
 
-### [ISSUE-04] Pembuatan Custom Reusable Widget: KartuResep, TombolUtama, & JudulBagian
-- **Assignee:** `@aress`
+### [ISSUE-04] Pembuatan Custom Reusable Widget: KartuResep, TombolUtama, & JudulBagian ([#7](https://github.com/Haritsdev0981/resep.makanan/issues/7))
+- **Assignee:** `@alfarezi170107`
 - **Milestone:** Sprint 1 - Reusable UI Components
 - **Labels:** `ui`, `widgets`
 - **Kriteria DPPB:** CLO C (StatelessWidget buatan sendiri, Stack, Expanded, Custom Widget dipakai ulang di >1 tempat)
@@ -139,12 +139,12 @@ Membangun widget kustom yang modular dan dapat digunakan kembali (*reusable*) di
 - [ ] Buat file `lib/widgets/tombol_utama.dart`:
   - Class `TombolUtama` (`StatelessWidget`): tombol berdesain konsisten dengan icon opsional dan state disable. Digunakan di Login, Form, Detail, dan Home.
   - Class `JudulBagian` (`StatelessWidget`): teks header bagian yang elegan dengan opsi tombol aksi "Lihat Semua".
-- [ ] Lakukan commit dan push: `feat(widgets): implement reusable KartuResep and TombolUtama widgets (#4)`.
+- [ ] Lakukan commit dan push: `feat(widgets): implement reusable KartuResep and TombolUtama widgets (#7)`.
 
 ---
 
-### [ISSUE-05] Implementasi Home Screen: Banner, Search, Filter Kategori, & Passing Data
-- **Assignee:** `@harits`
+### [ISSUE-05] Implementasi Home Screen: Banner, Search, Filter Kategori, & Passing Data ([#5](https://github.com/Haritsdev0981/resep.makanan/issues/5))
+- **Assignee:** `@Haritsdev0981`
 - **Milestone:** Sprint 2 - Core Features
 - **Labels:** `ui`, `feature`, `state-management`
 - **Kriteria DPPB:** CLO C (StatefulWidget, setState, ListView, LayoutBuilder, Passing Data arguments & pop)
@@ -167,8 +167,8 @@ Mengembangkan halaman utama (`HomeScreen`) yang menerima data login, menampilkan
 
 ---
 
-### [ISSUE-06] Pembuatan Form Tambah Resep Lengkap dengan Validasi Input
-- **Assignee:** `@aurel`
+### [ISSUE-06] Pembuatan Form Tambah Resep Lengkap dengan Validasi Input ([#6](https://github.com/Haritsdev0981/resep.makanan/issues/6))
+- **Assignee:** `@aureelnp`
 - **Milestone:** Sprint 2 - Form & Data Creation
 - **Labels:** `ui`, `form`, `validation`
 - **Kriteria DPPB:** CLO C (Form Input, 5 TextEditingController, Validasi Pesan Jelas, Navigator.pop dengan data)
@@ -199,8 +199,8 @@ Membangun halaman tambah resep baru (`FormScreen`) dengan form terstruktur untuk
 
 ---
 
-### [ISSUE-07] Implementasi Detail Screen, Konfirmasi Hapus (AlertDialog), & SnackBar Undo
-- **Assignee:** `@aress`
+### [ISSUE-07] Implementasi Detail Screen, Konfirmasi Hapus (AlertDialog), & SnackBar Undo ([#8](https://github.com/Haritsdev0981/resep.makanan/issues/8))
+- **Assignee:** `@alfarezi170107`
 - **Milestone:** Sprint 2 - Detail View & Destructive Action
 - **Labels:** `ui`, `dialogs`, `interaction`
 - **Kriteria DPPB:** CLO C (Passing Data Object via arguments, AlertDialog, SnackBar dengan aksi BATAL, Navigator.pop)
@@ -221,12 +221,12 @@ Mengembangkan halaman rincian resep (`DetailScreen`) yang menampilkan foto besar
   - Opsi: "Batal" (`Navigator.pop(context, false)`) dan "Hapus" berwarna merah (`Navigator.pop(context, true)`).
   - Jika dikonfirmasi hapus, panggil `Navigator.pop(context, true)` untuk memberi tahu screen sebelumnya.
 - [ ] Di screen pemanggil (`HomeScreen` / `KategoriScreen`), tampilkan `SnackBar` konfirmasi hapus dengan `SnackBarAction(label: 'BATAL', onPressed: ...)` untuk mengembalikan data (undo delete).
-- [ ] Lakukan commit dan push: `feat(detail): implement DetailScreen with AlertDialog and undo delete (#7)`.
+- [ ] Lakukan commit dan push: `feat(detail): implement DetailScreen with AlertDialog and undo delete (#8)`.
 
 ---
 
-### [ISSUE-08] Implementasi Layar Kategori, GridView Adaptif, & BottomSheet Filter
-- **Assignee:** `@aress`
+### [ISSUE-08] Implementasi Layar Kategori, GridView Adaptif, & BottomSheet Filter ([#9](https://github.com/Haritsdev0981/resep.makanan/issues/9))
+- **Assignee:** `@alfarezi170107`
 - **Milestone:** Sprint 3 - Adaptive Layout & Category View
 - **Labels:** `ui`, `responsive`, `adaptive`
 - **Kriteria DPPB:** CLO C (Non-Linear Map access, GridView, LayoutBuilder 1/2/3 kolom, BottomSheet, Bebas Overflow Landscape)
@@ -247,12 +247,12 @@ Membangun halaman katalog kategori (`KategoriScreen`) yang menampilkan resep ber
     - Layar lebar/desktop (>= 900px): **3 kolom** (`crossAxisCount: 3`)
 - [ ] Buat fungsi `showModalBottomSheet` di `HomeScreen` untuk memilih kategori cepat yang mengembalikan nilai string kategori terpilih (`Navigator.pop(context, kategori)`).
 - [ ] Uji mode landscape: pastikan tidak ada garis kuning-hitam (*RenderFlex overflow*).
-- [ ] Lakukan commit dan push: `feat(category): add KategoriScreen with adaptive LayoutBuilder and BottomSheet (#8)`.
+- [ ] Lakukan commit dan push: `feat(category): add KategoriScreen with adaptive LayoutBuilder and BottomSheet (#9)`.
 
 ---
 
-### [ISSUE-09] Pengujian Komprehensif (Widget Test, Overflow Landscape, & Lint Check)
-- **Assignee:** `@harits`
+### [ISSUE-09] Pengujian Komprehensif (Widget Test, Overflow Landscape, & Lint Check) ([#10](https://github.com/Haritsdev0981/resep.makanan/issues/10))
+- **Assignee:** `@Haritsdev0981`
 - **Milestone:** Sprint 3 - Quality Assurance & Testing
 - **Labels:** `testing`, `qa`, `lint`
 - **Kriteria DPPB:** CLO B & C (Kerapian Kode, Pencegahan Bug Overflow, Nilai Rubrik Maksimal)
@@ -269,12 +269,12 @@ Melakukan pengujian otomatis terhadap alur UI, widget buatan sendiri, dan memver
   - Menguji rendering `HomeScreen`, `DetailScreen`, dan `FormScreen` pada ukuran landscape (844 x 390 px) dan tablet (800 x 1280 px).
   - Memastikan tidak ada *RenderFlex overflowed by X pixels*.
 - [ ] Jalankan `flutter analyze` dan pastikan 0 error / warning.
-- [ ] Lakukan commit dan push: `test(qa): add widget tests and verify landscape no-overflow (#9)`.
+- [ ] Lakukan commit dan push dengan format: `test(qa): add widget tests and verify landscape no-overflow (#10)`.
 
 ---
 
-### [ISSUE-10] Finalisasi Proyek, Rangkuman Audit, & Build APK Debug
-- **Assignee:** `@harits` (Didukung oleh `@aurel` dan `@aress`)
+### [ISSUE-10] Finalisasi Proyek, Rangkuman Audit, & Build APK Debug ([#11](https://github.com/Haritsdev0981/resep.makanan/issues/11))
+- **Assignee:** `@Haritsdev0981` (Didukung oleh `@aureelnp` dan `@alfarezi170107`)
 - **Milestone:** Sprint 3 - Release & Submission
 - **Labels:** `release`, `documentation`, `build`
 - **Kriteria DPPB:** CLO A, B, C (Pengumpulan Proyek, Riwayat Commit Merata, APK Siap Demo)
@@ -284,12 +284,12 @@ Melakukan pengujian otomatis terhadap alur UI, widget buatan sendiri, dan memver
 Menggabungkan (*merge*) seluruh branch fitur ke branch utama, memverifikasi riwayat commit setiap anggota di GitHub, menyusun dokumen rangkuman audit, serta menghasilkan file APK Android untuk presentasi ujian.
 
 #### Checklist Pengerjaan (Acceptance Criteria):
-- [ ] Review seluruh Pull Request di GitHub dan pastikan semua anggota (`harits`, `aurel`, `aress`) memiliki riwayat commit aktif.
+- [ ] Review seluruh Pull Request di GitHub dan pastikan semua anggota (`Haritsdev0981`, `aureelnp`, `alfarezi170107`) memiliki riwayat commit aktif.
 - [ ] Merge semua branch ke `develop`, lalu buat PR final ke branch `master`.
 - [ ] Buat file `rangkuman.md` sebagai catatan audit kesesuaian kode terhadap rubrik penilaian dosen.
 - [ ] Lakukan build APK: `flutter build apk --debug`.
 - [ ] Pastikan file APK `build/app/outputs/flutter-apk/app-debug.apk` siap didemokan saat sesi tanya jawab/presentasi.
-- [ ] Lakukan commit dan push: `chore(release): finalize project, documentation, and release build (#10)`.
+- [ ] Lakukan commit dan push: `chore(release): finalize project, documentation, and release build (#11)`.
 
 ---
 
