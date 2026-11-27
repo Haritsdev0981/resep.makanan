@@ -45,7 +45,7 @@ ditampilkan di bagian bawah halaman login supaya mudah saat demo.
 ```
                         ┌──────────────────────┐
                         │  SplashScreen        │  route: /
-                        │  (Stateless)         │
+                        │  (Stateful)          │
                         └──────────┬───────────┘
                                    │ pushReplacementNamed
                                    │ (tidak bisa kembali)
@@ -127,7 +127,7 @@ lib/
 ├── data/
 │   └── data_resep.dart        # data dummy + Map per kategori
 ├── screens/
-│   ├── splash_screen.dart     # Stateless
+│   ├── splash_screen.dart     # Stateful (timer perpindahan otomatis)
 │   ├── login_screen.dart      # Stateful (username + password, validasi)
 │   ├── home_screen.dart       # Stateful (pencarian, filter, favorit)
 │   ├── detail_screen.dart     # Stateful (favorit, AlertDialog hapus)
@@ -146,8 +146,8 @@ lib/
 
 | Kriteria | Lokasi Bukti |
 |---|---|
-| **2 StatelessWidget** | `widgets/kartu_resep.dart` (`KartuResep`), `widgets/tombol_utama.dart` (`TombolUtama`), `screens/splash_screen.dart` (`SplashScreen`) |
-| **2 StatefulWidget** | `screens/login_screen.dart` (`LoginScreen`), `screens/home_screen.dart` (`HomeScreen`), `screens/form_screen.dart` (`FormScreen`), `screens/detail_screen.dart` (`DetailScreen`), `screens/kategori_screen.dart` (`KategoriScreen`) |
+| **2 StatelessWidget** | `widgets/kartu_resep.dart` (`KartuResep`), `widgets/tombol_utama.dart` (`TombolUtama`), `widgets/tombol_utama.dart` (`JudulBagian`) |
+| **2 StatefulWidget** | `screens/splash_screen.dart` (`SplashScreen`), `screens/login_screen.dart` (`LoginScreen`), `screens/home_screen.dart` (`HomeScreen`), `screens/form_screen.dart` (`FormScreen`), `screens/detail_screen.dart` (`DetailScreen`), `screens/kategori_screen.dart` (`KategoriScreen`) |
 | **Form input + TextEditingController** | `screens/login_screen.dart` — 2 controller (username, password); `screens/form_screen.dart` — 5 controller (nama, deskripsi, durasi, bahan, langkah); datanya dipakai membentuk objek `Resep` / proses login |
 | **Perubahan tampilan dengan setState** | `login_screen.dart` (`_sandiTersembunyi`), `home_screen.dart` (`_ubahFavorit`, `_bukaDetail`, `_bukaKategori`, `_bukaFilter`), `detail_screen.dart` (`_sudahDibuka`), `kategori_screen.dart` (hapus dari Map) |
 | **2 custom widget dipakai ulang** | `KartuResep` dipakai di `home_screen.dart` **dan** `kategori_screen.dart`; `TombolUtama` dipakai di `login_screen.dart`, `home_screen.dart`, `form_screen.dart`, `detail_screen.dart` |

@@ -49,9 +49,9 @@ class _DetailScreenState extends State<DetailScreen> {
       builder: (context) {
         return AlertDialog(
           title: const Text('Hapus resep?'),
+          // #perbaikan: Menyesuaikan pesan konfirmasi karena aksi penghapusan dapat dibatalkan melalui SnackBar BATAL di layar pemanggil
           content: Text(
-            '${resep.nama} akan dihapus dari daftar resep. '
-            'Tindakan ini tidak bisa dibatalkan.',
+            '${resep.nama} akan dihapus dari daftar resep.',
           ),
           actions: [
             TextButton(
