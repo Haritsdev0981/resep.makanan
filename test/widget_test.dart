@@ -10,15 +10,15 @@ void main() {
       await tester.pumpWidget(const AplikasiResep());
 
       expect(find.text('Resep Masakan Nusantara'), findsOneWidget);
-      expect(find.text('Lanjut ke Login'), findsOneWidget);
+      expect(find.byType(CircularProgressIndicator), findsOneWidget);
     });
 
     testWidgets('Aplikasi dapat dibuka langsung ke rute login',
         (WidgetTester tester) async {
       await tester.pumpWidget(const AplikasiResep(ruteAwal: Rute.login));
 
-      expect(find.text('Masuk Aplikasi'), findsOneWidget);
-      expect(find.text('Masuk sebagai Tamu / Demo'), findsOneWidget);
+      expect(find.text('Resep Masakan'), findsOneWidget);
+      expect(find.widgetWithText(ElevatedButton, 'Masuk'), findsOneWidget);
     });
 
     testWidgets('Aplikasi dapat dibuka langsung ke rute home dengan argument username',
