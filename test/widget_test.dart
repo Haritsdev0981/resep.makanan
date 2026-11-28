@@ -24,9 +24,10 @@ void main() {
     testWidgets('Aplikasi dapat dibuka langsung ke rute home dengan argument username',
         (WidgetTester tester) async {
       await tester.pumpWidget(const AplikasiResep(ruteAwal: Rute.home));
+      await tester.pumpAndSettle();
 
-      expect(find.text('Halo, ares!'), findsOneWidget);
-      expect(find.text('Tambah Resep Baru'), findsOneWidget);
+      expect(find.text('Halo, ares 👋'), findsOneWidget);
+      expect(find.text('Tambah Resep'), findsOneWidget);
     });
 
     test('Konstanta rute terdefinisi dengan benar', () {
